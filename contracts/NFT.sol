@@ -2,7 +2,6 @@
 pragma solidity ^0.8.9;
 
 // Bring in the openzeppelin ERC721 NFT functionality 
-
 import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol';
 import '@openzeppelin/contracts/utils/Counters.sol';
@@ -17,12 +16,11 @@ contract NFT is ERC721URIStorage {
 
     // OBJ: give the NFT market the ability to transact with tokens or change ownership
     // setApprovalForAll allows us to do that with contract address 
-
     // constructor set up our address
     constructor(address marketplaceAddress) ERC721('KryptoBirdz', 'KBIRDZ') {
         contractAddress = marketplaceAddress;
     }
-
+    
     function mintToken(string memory tokenURI) public returns(uint) {
         _tokenIds.increment();
         // declear a new unassigned variable
