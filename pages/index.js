@@ -105,7 +105,7 @@ export default function Home() {
                   The owner & minter is {nft.seller}
                 </p>
                 <p className='text-xs text-white' align='Left'>
-                  Verify this asset by clicking
+                  Verify this asset by clicking <button> here </button>
                 </p>
               </div>
             </div>
